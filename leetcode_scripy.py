@@ -5,7 +5,7 @@ import datetime
 total_success_request = 0
 total_error_requests = 0
 # change it to your min questions requirements
-min_questions_needed = 25
+min_days_needed = 25
 eligible_candidates = []
 invalid_usernames = []
 # change it to your month requirements
@@ -48,7 +48,7 @@ if candidate_name:
                 data_dict = api_data['submissionCalendar']
                 december_submissions = {timestamp: count for timestamp, count in data_dict.items() if datetime.datetime.fromtimestamp(int(timestamp)).month == month}
                 total_success_request += 1
-                if len(december_submissions) >= min_questions_needed:
+                if len(december_submissions) >= min_days_needed:
                     eligible_candidates.append(i)
             else:
                 invalid_usernames.append(i)

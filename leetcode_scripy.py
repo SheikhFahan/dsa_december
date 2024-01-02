@@ -55,12 +55,6 @@ if candidate_name:
                 total_error_requests += 1
             
 
-        else:
-            invalid_usernames.append(i)
-            print('this is working as well ')
-            total_error_requests += 1
-            
-
 print('eligible_candidates are')
 print(eligible_candidates)
 print('total_eligible candidates ' ,len(eligible_candidates) )
